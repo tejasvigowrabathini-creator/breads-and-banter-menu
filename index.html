@@ -5,255 +5,197 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Breads & Banter</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-*{
+
+body{
 margin:0;
-padding:0;
-box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+background:#faf7f2;
+color:#2d2d2d;
 scroll-behavior:smooth;
 }
 
-body{
-font-family:'Inter',sans-serif;
-background:#f8f5f2;
-color:#2b2b2b;
-}
-
-h1,h2,h3{
-font-family:'Playfair Display',serif;
-}
-
-section{
-padding:100px 8%;
-}
-
+/* HERO SECTION */
 .hero{
 height:100vh;
-position:relative;
-overflow:hidden;
-}
-
-.slide{
-position:absolute;
-width:100%;
-height:100%;
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url('https://images.unsplash.com/photo-1550547660-d9450f859349');
 background-size:cover;
 background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
-transition:opacity 1.2s ease;
-opacity:0;
-}
-
-.slide.active{
-opacity:1;
-}
-
-.overlay{
-background:rgba(0,0,0,0.45);
-width:100%;
-height:100%;
-position:absolute;
-}
-
-.slide-content{
-position:relative;
-color:white;
 text-align:center;
-z-index:2;
+color:white;
 }
 
-.slide-content h1{
-font-size:4rem;
-margin-bottom:20px;
-letter-spacing:2px;
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:70px;
+letter-spacing:3px;
 }
 
-.slide-content p{
-font-size:1.2rem;
-font-weight:300;
+.hero p{
+font-size:20px;
+margin-top:10px;
 }
 
-.menu-section{
-max-width:1200px;
-margin:auto;
+.section{
+padding:80px 10%;
 }
 
-.menu-title{
-font-size:2.5rem;
+.section h2{
+font-family:'Playfair Display',serif;
+font-size:42px;
 margin-bottom:40px;
-border-bottom:2px solid #d6c1b2;
-display:inline-block;
-padding-bottom:10px;
+text-align:center;
 }
 
-.menu-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+/* Video Section */
+.video-container{
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.video-card{
+width:320px;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+background:white;
+}
+
+.video-card video{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.video-card h3{
+padding:15px;
+text-align:center;
+}
+
+/* MENU LIST */
+.menu-category{
+margin-bottom:60px;
+}
+
+.menu-category h3{
+font-size:30px;
+margin-bottom:20px;
+border-bottom:2px solid #d4a373;
+display:inline-block;
+padding-bottom:5px;
 }
 
 .menu-item{
-background:white;
-padding:20px 25px;
-border-radius:14px;
-box-shadow:0 10px 30px rgba(0,0,0,0.06);
 display:flex;
 justify-content:space-between;
-transition:0.3s ease;
+margin-bottom:10px;
+font-size:18px;
 }
 
-.menu-item:hover{
-transform:translateY(-6px);
-}
-
-.price{
-font-weight:600;
-}
-
-.call-section{
-text-align:center;
-background:#2b2b2b;
+.footer{
+background:#1c1c1c;
 color:white;
-padding:60px 20px;
+padding:40px;
+text-align:center;
 }
 
 .call-btn{
 display:inline-block;
 margin-top:20px;
-padding:14px 35px;
-background:#d6a87a;
+padding:12px 25px;
+background:#d4a373;
 color:white;
-border-radius:40px;
 text-decoration:none;
-font-weight:500;
-transition:0.3s;
+border-radius:30px;
 }
 
-.call-btn:hover{
-background:#b7855f;
-}
 </style>
 </head>
 
 <body>
 
-<!-- HERO SLIDER -->
-
+<!-- HERO -->
 <div class="hero">
-
-<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1543352634-99a5d50ae78e');">
-<div class="overlay"></div>
-<div class="slide-content">
+<div>
 <h1>Breads & Banter</h1>
-<p>Where Conversations Meet Culinary Art</p>
+<p>Where Flavor Meets Conversation</p>
 </div>
 </div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1550547660-d9450f859349');">
-<div class="overlay"></div>
-<div class="slide-content">
-<h1>Signature Burgers</h1>
-<p>Crafted With Passion</p>
-</div>
+<!-- VIDEO SHOWCASE -->
+<div class="section">
+<h2>Chef's Signature Specials</h2>
+<div class="video-container">
+
+<div class="video-card">
+<video autoplay muted loop>
+<source src="https://cdn.coverr.co/videos/coverr-ramen-noodles-9794/1080p.mp4" type="video/mp4">
+</video>
+<h3>Authentic Ramen</h3>
 </div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1604908176997-431e66a6d0f4');">
-<div class="overlay"></div>
-<div class="slide-content">
-<h1>Authentic Ramen</h1>
-<p>Rich Broth. Bold Flavors.</p>
-</div>
-</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1598514982451-03cb8f68e8e3');">
-<div class="overlay"></div>
-<div class="slide-content">
-<h1>Italian Pastas</h1>
-<p>Handcrafted & Comforting</p>
-</div>
+<div class="video-card">
+<video autoplay muted loop>
+<source src="https://cdn.coverr.co/videos/coverr-pasta-cooking-1573/1080p.mp4" type="video/mp4">
+</video>
+<h3>Italian Pasta</h3>
 </div>
 
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1599785209707-28e5c2d0b2d4');">
-<div class="overlay"></div>
-<div class="slide-content">
-<h1>Artisan Pizzas</h1>
-<p>Stone-Baked Perfection</p>
-</div>
-</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1551782450-a2132b4ba21d');">
-<div class="overlay"></div>
-<div class="slide-content">
-<h1>Global Main Courses</h1>
-<p>Inspired From Around The World</p>
-</div>
-</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe');">
-<div class="overlay"></div>
-<div class="slide-content">
-<h1>Fresh Salads</h1>
-<p>Healthy & Vibrant</p>
-</div>
-</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1578985545062-69928b1d9587');">
-<div class="overlay"></div>
-<div class="slide-content">
-<h1>Decadent Desserts</h1>
-<p>Sweet Endings</p>
-</div>
-</div>
-
-<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1544148103-0773bf10d330');">
-<div class="overlay"></div>
-<div class="slide-content">
-<h1>Refreshing Beverages</h1>
-<p>Sip. Relax. Enjoy.</p>
-</div>
+<div class="video-card">
+<video autoplay muted loop>
+<source src="https://cdn.coverr.co/videos/coverr-pizza-slice-1571/1080p.mp4" type="video/mp4">
+</video>
+<h3>Woodfired Pizza</h3>
 </div>
 
 </div>
-
-<!-- MENU START -->
-
-<section class="menu-section">
-<h2 class="menu-title">Ramen Bowls</h2>
-<div class="menu-grid">
-<div class="menu-item"><span>Kyushu Ramen</span><span class="price">₹625</span></div>
-<div class="menu-item"><span>Tokyo Tori Ramen</span><span class="price">₹550</span></div>
 </div>
-</section>
 
-<section class="menu-section">
-<h2 class="menu-title">Starters</h2>
-<div class="menu-grid">
-<div class="menu-item"><span>Banters Companion</span><span class="price">₹340</span></div>
-<div class="menu-item"><span>Dd Hot Wings</span><span class="price">₹370</span></div>
-<div class="menu-item"><span>Devilled Mutton Chops</span><span class="price">₹400</span></div>
-<div class="menu-item"><span>La Gee – Gee Style Chicken</span><span class="price">₹350</span></div>
+<!-- FULL MENU -->
+<div class="section">
+<h2>Full Menu</h2>
+
+<div class="menu-category">
+<h3>🍜 Ramen Bowls</h3>
+<div class="menu-item"><span>Kyushu Ramen</span><span>₹625</span></div>
+<div class="menu-item"><span>Tokyo Tori Ramen</span><span>₹550</span></div>
 </div>
-</section>
 
-<section class="call-section">
-<h2>Reserve or Order Now</h2>
-<a class="call-btn" href="tel:+918884800123">Call Restaurant</a>
-</section>
+<div class="menu-category">
+<h3>🍟 Starters</h3>
+<div class="menu-item"><span>Banters Companion</span><span>₹340</span></div>
+<div class="menu-item"><span>Dd Hot Wings</span><span>₹370</span></div>
+<div class="menu-item"><span>Devilled Mutton Chops</span><span>₹400</span></div>
+<div class="menu-item"><span>La Gee – Gee Style Chicken</span><span>₹350</span></div>
+<div class="menu-item"><span>La Gee – Gee Style Prawn</span><span>₹390</span></div>
+<div class="menu-item"><span>Lebanese Love</span><span>₹365</span></div>
+<div class="menu-item"><span>Malay Satay (Chicken)</span><span>₹370</span></div>
+<div class="menu-item"><span>Mexican Bean Nachos (Cottage Cheese)</span><span>₹340</span></div>
+<div class="menu-item"><span>Mexican Bean Nachos (Chicken)</span><span>₹365</span></div>
+<div class="menu-item"><span>Mings Secret Chicken</span><span>₹370</span></div>
+<div class="menu-item"><span>Mings Secret Prawn</span><span>₹395</span></div>
+<div class="menu-item"><span>Trekker Trail</span><span>₹370</span></div>
+<div class="menu-item"><span>Village Oven Garlic Bread</span><span>₹240</span></div>
+</div>
 
-<script>
-let slides=document.querySelectorAll('.slide');
-let index=0;
+<!-- You can duplicate this block style for all other categories exactly the same -->
 
-setInterval(()=>{
-slides[index].classList.remove('active');
-index=(index+1)%slides.length;
-slides[index].classList.add('active');
-},4000);
-</script>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+<h3>Order Directly</h3>
+<p>Call Breads & Banter to order your favorite dishes.</p>
+<a href="tel:+919000000000" class="call-btn">Call Now</a>
+</div>
 
 </body>
 </html>
